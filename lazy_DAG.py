@@ -143,7 +143,7 @@ class lazy_DAG(object):
         return new_graph
 
 if __name__ == "__main__":
-    ld = lazy_DAG("./tp2-donnees/poset10-4a")
+    ld = lazy_DAG("./poset10-4a")
     ld2 = lazy_DAG(ordered_dict=ld.adj_dict)
     print(ld.adj_dict)
     print("in_degree_0():")
