@@ -96,6 +96,8 @@ class lazy_DAG(object):
     def has_edge(self, u, v):
         """ Checks if the graph has an edge u -> v, this function must be called
         with nodes that have not been removed """
+        if u == None or v == None:
+            return False
         assert (self._is_active(u) and self._is_active(v)), "has_edge cannot be called on nodes that have been removed"
         assert u < self.n_nodes and v < self.n_nodes
         return v in self.adj_dict[u]
